@@ -1,0 +1,38 @@
+BDD Style TCs		
+		
+Scenario 1	Sending email to recipients	
+	GIVEN	The user logged into gmail account using credentials
+	WHEN	Click on Compose button
+	AND	Enter recipients email address in 'To' section <To>
+	AND	Enter subject in 'Subject' section <Subject>
+	AND	Enter Email body <email body>
+	WHEN	Click on Send button
+	THEN	User should be send email successfully to intended recipients
+		
+Scenario 2	Sending email with blank recipients	
+	GIVEN	The user logged into gmail account using credentials
+	WHEN	Click on Compose button
+	AND	Blank recipients
+	AND	Enter subject in 'Subject' section <Subject>
+	AND	Enter Email body <email body>
+	WHEN	Click on Send button
+	THEN	User should display with error popup about no recipient
+	AND	Email not be send 
+		
+Scenario 3	Sending email to valid email address with empty subject	
+	GIVEN	The user logged into gmail account using credentials
+	WHEN	Click on Compose button
+	AND	Enter recipients valid email address in 'To' section <To>
+	AND	Empty subject section
+	AND	Enter Email body <email body>
+	WHEN	Click on Send button
+	THEN	User should be send email successfully to intended recipients with no subject
+		
+Scenario 4	Sending email to valid email address with blank email body	
+	GIVEN	The user logged into gmail account using credentials
+	WHEN	Click on Compose button
+	AND	Enter recipients valid email address in 'To' section <To>
+	AND	Enter subject in 'Subject' section <Subject>
+	AND	Blank Email body 
+	WHEN	Click on Send button
+	THEN	User should be send email successfully to intended recipients with empty email body
