@@ -1,0 +1,111 @@
+Assignment - The compose function in Gmail to send the email 
+		
+TC ID 1		
+Brief Description: Verify Login into Gmail application		
+	Component:Gmail_Login_Page	
+	Prerequisite 1: Open gmail application	
+	Prerequisite 2: Create new user	
+	Data Parameter/s: <Email> <Password>	
+	Steps:	
+	Action 1: Enter <Email>= "umachavan@gmail.com" and <Password>= "123456" 	
+	Expected result 1: User able to enter the credentials	
+	Action 2: Click on Next	
+	Expected result 2: User shall Login into gmail account	
+Expected Output : User shall successfully login into gmail and Inbox tab bydefault open		
+		
+Tc ID 2		
+Brief Description: Verify Compose button and compose window with available fields		
+	Component: Compose_window	
+	Prerequisite 1: Execute TC ID <1> to login into gmail application	
+	Data Parameter/s: NA	
+	Steps:	
+	Action 1: Click on 'Compose' Button	
+	Expected result 1: Compose window shall get open with 'To', 'cc' and 'bcc' sections. Cursor shall highlighted in 'To' section	
+	Action 2: Verify Subject, Email body section in Compose window	
+	Expected result 2: Subject section shall display below 'To' section and Email body section shall show empty 	
+	Action 3: Verify Send button 	
+	Expected result 3: Send button shall show in Active status at the Bottom left corner of the window	
+Expected Output : User shall display with To, CC, Bcc, subject, email body and Send button section on Compose window		
+		
+Tc ID 3		
+Brief Description: Verify Send button on Compose email window		
+	Component: Compose_window	
+	Prerequisite 1: Execute TC ID <1> to login into gmail application	
+	Data Parameter/s: <To><Subject><Email_Body>	
+	Steps:	
+	Action 1: Click on 'Compose' Button and Enter valid recipients email address in To section; <To>="gouthami@incubyte.co"	
+	Expected result 1: In Compose window, To field shall display entered email address "gouthami@incubyte.co" in correct format	
+	Action 2: Enter subject, <Subject>= "Incubyte" 	
+	Expected result 2: Subject section shall display entered subject "Incubyte"	
+	Action 3: Enter in Email body <Email Body>= "QA test for Incubyte" 	
+	Expected result 3: In Email body section, entered text "QA test for Incubyte" shall display	
+	Action 4: Click on Send button	
+	Expected result 4: Email shall successfully sent to Recipients and 'Message Sent' message shall display in popup at the bottom 	
+Expected Output : User shall sent mail succefully which should be received by intended Recipient with correct data		
+		
+		
+Tc ID 4		
+Brief Description: Verify that user can enter multiple comma separated emailIds in 'To','cc' and 'bcc' sections		
+	Component: Compose_window	
+	Prerequisite 1: Execute TC ID <1> to login into gmail application	
+	Data Parameter/s: <To><cc><Bcc><Subject><Email_Body>	
+	Steps:	
+	Action 1: Click on 'Compose' Button and Enter valid recipients email address in To section; <To>="gouthami@incubyte.co" , "umachavan6@gmail.com"	
+	Expected result 1: In Compose window, To field shall display entered email address "gouthami@incubyte.co, umachavan6@gmail.com" seperated by comma	
+	Action 2: Enter in CC section <Cc>= "samplemail1@gmail.com" , "samplemail2@gmail.com"	
+	Expected result 2: Cc field shall display entered email address "samplemail1@gmail.com" , "samplemail2@gmail.com" seperated by comma	
+	Action 3: Enter in BCC section <BCc>= "samplemail3@gmail.com" , "samplemail4@gmail.com"	
+	Expected result 3: BCc field shall display entered email address "samplemail3@gmail.com" , "samplemail4@gmail.com" seperated by comma	
+	Action 4: Enter subject, <Subject>= "Incubyte" 	
+	Expected result 4: Subject section shall display entered subject "Incubyte"	
+	Action 5: Enter in Email body <Email Body>= "QA test for Incubyte" 	
+	Expected result 5: In Email body section, entered text "QA test for Incubyte" shall display	
+	Action 6: Click on Send button	
+	Expected result 6: Email shall successfully sent to Recipients and 'Message Sent' message shall display in popup at the bottom 	
+Expected Output : User shall sent mail succefully to all the Recipients with correct data		
+		
+Tc ID 5		
+Brief Description: Verify Send button on Compose email window without any recipient mail address		
+	Component: Compose_window	
+	Prerequisite 1: Execute TC ID <1> to login into gmail application	
+	Data Parameter/s: <Subject><Email_Body>	
+	Steps:	
+	Action 1:Click on 'Compose' button and Enter subject, <Subject>= "Incubyte" 	
+	Expected result 1: Subject section shall display entered subject "Incubyte"	
+	Action 2: Enter in Email body <Email Body>= "QA test for Incubyte" 	
+	Expected result 2: In Email body section, entered text "QA test for Incubyte" shall display	
+	Action 3: Without adding recipients mail address, Click on Send button	
+	Expected result 3: Error popup shall display about adding recipient with Ok button	
+	Action 4: Without adding recipients mail address, Click on Send button	
+	Expected result 4: Error popup shall display about adding recipient with Ok button	
+	Action 5: On error popup, Click on Ok button	
+	Expected result 5: Error popup shall disappear and user get back to compose mail window	
+Expected Output : User shall display with Error message and unable to sent mail 		
+		
+Tc ID 6		
+Brief Description: Verify Send button with empty subject		
+	Component: Compose_window	
+	Prerequisite 1: Execute TC ID <1> to login into gmail application	
+	Data Parameter/s: <To><Email_Body>	
+	Steps:	
+	Action 1: Click on 'Compose' Button and Enter valid recipients email address in To section; <To>="gouthami@incubyte.co"	
+	Expected result 1: In Compose window, To field shall display entered email address "gouthami@incubyte.co" in correct format	
+	Action 2: Enter in Email body <Email Body>= "QA test for Incubyte" 	
+	Expected result 2: In Email body section, entered text "QA test for Incubyte" shall display	
+	Action 3: Click on Send button	
+	Expected result 3: Email shall successfully sent to Recipients and 'Message Sent' message shall display in popup at the bottom 	
+Expected Output : User shall sent mail succefully to the intended Recipient with no subject		
+		
+Tc ID 7		
+Brief Description: Verify Send button with no text in Email body		
+	Component: Compose_window	
+	Prerequisite 1: Execute TC ID <1> to login into gmail application	
+	Data Parameter/s: <To><Email_Body>	
+	Steps:	
+	Action 1: Click on 'Compose' Button and Enter valid recipients email address in To section; <To>="gouthami@incubyte.co"	
+	Expected result 1: In Compose window, To field shall display entered email address "gouthami@incubyte.co" in correct format	
+	Action 2: Enter subject, <Subject>= "Incubyte" 	
+	Expected result 2: Subject section shall display entered subject "Incubyte"	
+	Action 3: Click on Send button	
+	Expected result 3: Email shall successfully sent to Recipients and 'Message Sent' message shall display in popup at the bottom 	
+Expected Output : User shall sent mail succefully to the intended Recipient with blank email body		
